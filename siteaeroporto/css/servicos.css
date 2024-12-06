@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #eaeaea;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    width: 100%;
+    min-height: 90vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    color: white;
+    padding: 250px; 
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section h1 {
+    text-decoration: underline;
+    text-underline-offset: 9px;
+    text-decoration-color: #96969661;
+    font-size: 48px;
+    color: #1d3466;
+    font-weight: bold;
+    margin-top: 0; 
+    margin-bottom: 40px; 
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10%;
+    background: #1d3466;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+
+.logo-img {
+    height: 120px;
+    width: auto;
+}
+navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 20px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #7b7b85;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8%;
+}
+
+.navbar-toggle {
+    display: none; 
+}
+
+.navbar.open {
+    display: block; 
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 95%;
+    }
+
+    .service-card {
+        max-width: 100%; 
+    }
+
+    .hero-section {
+        min-height: 50vh; 
+        padding: 20px 5%;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; 
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 100px; 
+}
+
+.service-card {
+    background-color: #1d3466;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; 
+    max-width: 350px; 
+    width: 100%;
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+}
+
+.service-card img {
+    width: 90px; 
+    height: 90px; 
+    margin-bottom: 20px;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.service-card h2 {
+    margin-bottom: 15px; 
+    color: #ffffff;
+}
+
+.service-card p {
+    margin-bottom: 30px; 
+    color: #d2d2d2;
+}
+
+.service-card .more-link {
+    display: inline-block;
+    background-color: #007bff00;
+    color: #ffffff;
+    padding: 12px 25px; 
+    text-decoration: none;
+    text-decoration: underline; 
+    text-underline-offset: 9px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.service-card .more-link:hover {
+    display: inline-block;
+    background-color: #007bff00;
+    color: #ffffff;
+    padding: 12px 25px; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #1d3466;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
