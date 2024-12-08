@@ -90,7 +90,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background: url('../img/airbus.png') center/cover no-repeat;
+    background: url('/img/airbus.png') center/cover no-repeat;
 
 
     color: white;
